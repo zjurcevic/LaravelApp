@@ -93,6 +93,7 @@ class BankController extends Controller
      */
     public function destroy($id)
     {
-        //
+        \App\Bank::destroy($id);
+        return redirect()->action('BankController@index');
     }
 }

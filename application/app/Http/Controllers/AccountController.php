@@ -104,6 +104,7 @@ class AccountController extends Controller
      */
     public function destroy($id)
     {
-        //
+        \App\Account::destroy($id);
+        return redirect()->action('AccountController@index');
     }
 }

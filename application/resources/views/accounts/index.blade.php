@@ -19,6 +19,7 @@
       <th scope="col">Close-Date</th>
       <th scope="col">Ime</th>
       <th scope="col">Ime Banke</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -36,6 +37,7 @@
       <td><?= $account->account_closeDate ?></td>
       <td><?= $account->person->person_firstName ?></td>
       <td><?= $account->bank->bank_name ?></td>
+      <td><a href="/accounts/delete/{{ $account->id }}" class="btn btn-sm btn-danger">X</a></td>
     </tr>
   @endforeach
   </tbody>

@@ -16,7 +16,8 @@
       <th scope="col">Telephone</th>
       <th scope="col">E-mail</th>
       <th scope="col">Address</th>
-      <th scope="col">City-ID</th>
+      <th scope="col">City Name</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -32,6 +33,7 @@
       <td><?= $person->person_email ?></td>
       <td><?= $person->person_address ?></td>
       <td><?= $person->city->city_name ?></td>
+      <td><a href="/persons/delete/{{ $person->id }}" class="btn btn-sm btn-danger">X</a></td>
     </tr>
   @endforeach
   </tbody>

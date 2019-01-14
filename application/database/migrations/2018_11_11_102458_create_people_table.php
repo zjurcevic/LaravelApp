@@ -23,7 +23,7 @@ class CreatePeopleTable extends Migration
             $table->string('person_email', 30)->unique();
             $table->string('person_address', 50);
             $table->unsignedInteger('city_id');
-            $table->foreign('city_id')->references('id')->on('cities');
+            $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
             $table->timestamps();
         });
     }

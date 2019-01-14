@@ -101,6 +101,7 @@ class PersonController extends Controller
      */
     public function destroy($id)
     {
-        //
+        \App\Person::destroy($id);
+        return redirect()->action('PersonController@index');
     }
 }

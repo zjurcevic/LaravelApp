@@ -15,7 +15,7 @@ class CreateContinentsTable extends Migration
         Schema::create('continents', function (Blueprint $table) {
             $table->increments('id');
             $table->string('continent_name')->unique()->required();
-            $table->integer('number_of_countries')->required();
+            $table->integer('number_of_countries')->required()->default(0);
             $table->string('native_name');
             $table->timestamps();
         });

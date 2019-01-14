@@ -14,7 +14,7 @@ class ContinentsTableSeeder extends Seeder
         App\Continent::create([
             'continent_name' => 'Europe',
             'number_of_countries' => '46',
-            'native_name' => 'Evropa'
+            'native_name' => 'Europa'
         ]);
     }
 }

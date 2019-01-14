@@ -16,7 +16,8 @@ class CreateCountriesTable extends Migration
             $table->increments('id');
             $table->string('country_code')->unique();
             $table->string('country_name');
-            $table->string('continent_id');
+            $table->unsignedInteger('continent_id');
+            $table->foreign('continent_id')->references('id')->on('continents')->onDelete('cascade');;
             $table->timestamps();
         });
     }

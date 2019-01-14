@@ -24,16 +24,22 @@ Route::get('/persons', 'PersonController@index');
 
 Route::get('/continents/new', 'ContinentController@create');
 Route::post('/continents', 'ContinentController@store');
+Route::get('/continents/delete/{id}', 'ContinentController@destroy');
 Route::get('/countries/new', 'CountryController@create');
 Route::post('/countries', 'CountryController@store');
+Route::get('/countries/delete/{id}', 'CountryController@destroy');
 Route::get('/cities/new', 'CityController@create');
 Route::post('/cities', 'CityController@store');
+Route::get('/cities/delete/{id}', 'CityController@destroy');
 Route::get('/accounts/new', 'AccountController@create');
 Route::post('/accounts', 'AccountController@store');
+Route::get('/accounts/delete/{id}', 'AccountController@destroy');
 Route::get('/banks/new', 'BankController@create');
 Route::post('/banks', 'BankController@store');
+Route::get('/banks/delete/{id}', 'BankController@destroy');
 Route::get('/persons/new', 'PersonController@create');
 Route::post('/persons', 'PersonController@store');
+Route::get('/persons/delete/{id}', 'PersonController@destroy');
 
 
 Route::get('/documents', 'DocumentController@index')->name('documents');

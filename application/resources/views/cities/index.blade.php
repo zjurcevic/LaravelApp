@@ -9,7 +9,8 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
-      <th scope="col">Country-ID</th>
+      <th scope="col">Country Name</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +19,7 @@
       <td><?= $city->id ?></td>
       <td><?= $city->city_name ?></td>
       <td><?= $city->country->country_name ?></td>
+      <td><a href="/cities/delete/{{ $city->id }}" class="btn btn-sm btn-danger">X</a></td>
     </tr>
   @endforeach
   </tbody>

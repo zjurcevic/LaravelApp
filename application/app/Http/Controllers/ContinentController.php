@@ -100,6 +100,7 @@ class ContinentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        \App\Continent::destroy($id);
+        return redirect()->action('ContinentController@index');
     }
 }

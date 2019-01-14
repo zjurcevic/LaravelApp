@@ -13,7 +13,7 @@ class CountryController extends Controller
      */
     public function index()
     {
-        $countries = \App\Country::paginate();
+        $countries = \App\Country::with(['continent'])->paginate();
         return view('countries/index', ['countries' => $countries]);
     }
 
@@ -95,6 +95,7 @@ class CountryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        \App\Country::destroy($id);
+        return redirect()->action('CountryController@index');
     }
 }
